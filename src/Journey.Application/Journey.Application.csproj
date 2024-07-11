@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UseCases\NovaPasta\**" />
+    <Compile Remove="UseCases\Trips\NovaPasta\**" />
+    <EmbeddedResource Remove="UseCases\NovaPasta\**" />
+    <EmbeddedResource Remove="UseCases\Trips\NovaPasta\**" />
+    <None Remove="UseCases\NovaPasta\**" />
+    <None Remove="UseCases\Trips\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="UseCases\RegisterTripUseCase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Journey.Communication\Journey.Communication.csproj" />
+    <ProjectReference Include="..\Journey.Exception\Journey.Exception.csproj" />
+    <ProjectReference Include="..\Journey.Infrastructure\Journey.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
